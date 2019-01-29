@@ -1,5 +1,5 @@
 FROM nvidia/cuda:8.0-cudnn5-devel-ubuntu16.04
-MAINTAINER "Durgesh Mankekar"
+MAINTAINER "Eufrat Tsaqib"
 
 RUN apt-get update && apt-get install -y wget ca-certificates \
     git curl vim python3-dev python3-pip \
@@ -7,7 +7,7 @@ RUN apt-get update && apt-get install -y wget ca-certificates \
 
 RUN pip3 install --upgrade pip
 RUN pip3 install numpy pandas sklearn matplotlib seaborn jupyter
-RUN pip3 install http://download.pytorch.org/whl/cu80/torch-0.1.10.post2-cp35-cp35m-linux_x86_64.whl 
+RUN pip3 install http://download.pytorch.org/whl/cu80/torch-0.1.10.post2-cp35-cp35m-linux_x86_64.whl
 RUN pip3 install torchvision
 
 RUN ["mkdir", "notebooks"]

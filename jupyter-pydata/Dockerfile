@@ -1,5 +1,5 @@
 FROM ubuntu:16.04
-MAINTAINER "Durgesh Mankekar"
+MAINTAINER "Eufrat Tsaqib"
 
 RUN apt-get update && apt-get install -y wget bzip2 ca-certificates \
     git curl vim python3-dev python3-pip \
