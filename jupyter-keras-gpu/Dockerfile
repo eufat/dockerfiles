@@ -6,7 +6,7 @@ RUN apt-get update && apt-get install -y wget ca-certificates \
     libfreetype6-dev libpng12-dev libhdf5-dev
 
 RUN pip3 install --upgrade pip
-RUN pip3 install tensorflow-gpu
+RUN pip3 install tf-nightly-gpu
 RUN pip3 install numpy pandas sklearn matplotlib seaborn jupyter pyyaml h5py
 RUN pip3 install keras --no-deps
 
