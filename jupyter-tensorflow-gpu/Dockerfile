@@ -7,7 +7,7 @@ RUN apt-get update && apt-get install -y wget ca-certificates \
 
 RUN pip3 install --upgrade pip
 RUN pip3 install tf-nightly-gpu
-RUN pip3 install numpy pandas sklearn matplotlib seaborn jupyter
+RUN pip3 install numpy pandas sklearn matplotlib seaborn spectral jupyter jupyterlab
 
 RUN ["mkdir", "notebooks"]
 COPY jupyter_notebook_config.py /root/.jupyter/

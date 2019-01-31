@@ -7,7 +7,7 @@ RUN apt-get update && apt-get install -y wget ca-certificates \
 
 RUN pip3 install --upgrade pip
 RUN pip3 install tf-nightly-gpu
-RUN pip3 install numpy pandas sklearn matplotlib seaborn jupyter pyyaml h5py
+RUN pip3 install numpy pandas sklearn matplotlib seaborn jupyter jupyterlab pyyaml h5py spectral
 RUN pip3 install keras --no-deps
 
 RUN ["mkdir", "notebooks"]
