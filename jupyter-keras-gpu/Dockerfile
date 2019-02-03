@@ -13,6 +13,7 @@ RUN pip3 install keras --no-deps
 RUN ["mkdir", "notebooks"]
 COPY jupyter_notebook_config.py /root/.jupyter/
 COPY run_jupyter.sh /
+COPY run_tensorboard.sh /
 
 # Jupyter and Tensorboard ports
 EXPOSE 8888 6006
@@ -20,5 +21,4 @@ EXPOSE 8888 6006
 # Store notebooks in this mounted directory
 VOLUME /notebooks
 
-CMD ["/run_jupyter.sh"]
-
+CMD ["/run_jupyter.sh", "/run_tensorboard.sh"]
